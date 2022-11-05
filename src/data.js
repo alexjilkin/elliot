@@ -3,8 +3,16 @@ export const data = {
 }
 
 export const setData = (id, value) => {
-    localStorage.setItem(id, value);
+    localStorage.setItem(id, JSON.stringify(value));
 }
 
-export const getData = (id) => 
-    localStorage.getItem(id);
+export const getData = (id) => {
+    const res = localStorage.getItem(id)
+    try {
+        return JSON.parse(res);
+    } catch(err) {
+        return res;
+    }
+    
+}
+    
