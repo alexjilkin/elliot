@@ -30,7 +30,7 @@ const App = () => {
       >
         <GoalsView/>
         <span>
-          {goals && <Journal onEnd={() => setCurrentState(3)}/>}
+          {goals && <Journal onEnd={(cont) => cont === true && setCurrentState(3)}/>}
         </span>
       </div>
     </div>
@@ -60,10 +60,12 @@ const Journal = ({onEnd}) => {
     setIsModalOpen(true)
   }
 
-  const handleEnd = () => {
-    const badges = getData("badges");
-    setData("badges", [...badges, 1])
-    onEnd && onEnd();
+  const handleEnd = (cont) => {
+    if (cont) {
+      const badges = getData("badges");
+      setData("badges", [...badges, 1])
+    }
+    onEnd && onEnd(cont);
     setIsModalOpen(false);
   }
 

@@ -7,7 +7,7 @@ export const JournalEntry = ({onEnd}) => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        onEnd();
+        onEnd(true);
         setData("journal", value)
     }
 
