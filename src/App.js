@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { app } from "./Game";
 import { UI } from "./ui";
 import { getData, setData } from "./data";
+import { JournalEntry } from "./ui/JournalEntry";
+
 const App = () => {
   const ref = useRef();
   const [currentState, setCurrentState] = useState(0);
@@ -26,9 +28,9 @@ const App = () => {
           justifyContent: "space-between",
         }}
       >
-        <GoalsView />
+        <GoalsView/>
         <span>
-          {goals && <Journal />}
+          {goals && <Journal onEnd={() => setCurrentState(3)}/>}
         </span>
       </div>
     </div>
@@ -51,8 +53,22 @@ const GoalsView = () => {
   );
 };
 
-const Journal = () => {
+const Journal = ({onEnd}) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const handleClick = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleEnd = () => {
+    const badges = getData("badges");
+    setData("badges", [...badges, 1])
+    onEnd && onEnd();
+    setIsModalOpen(false);
+  }
+
   return (
+    <>
     <div
       className="journal-button"
       style={{
@@ -67,9 +83,14 @@ const Journal = () => {
         alignItems: "center",
         justifyContent: "center",
       }}
+      onClick={handleClick}
     >
       Journal
     </div>
+    {
+        isModalOpen && <JournalEntry onEnd={handleEnd}/>
+      }
+    </>
   );
 };
 

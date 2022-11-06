@@ -11,6 +11,10 @@ export const Goals = ({onEnd}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(goal === "" ) {
+            return;
+        }
+
         setGoals([...goals, goal])
         setGoal("")
     }

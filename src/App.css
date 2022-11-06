@@ -3,6 +3,14 @@
   display: flex;
 }
 
+.journal-button {
+  z-index: 3;
+}
+.journal-button:hover {
+  filter: contrast(150%);
+  
+}
+
 .container canvas {
     border-radius: 10px;
 }

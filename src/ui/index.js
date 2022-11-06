@@ -32,6 +32,12 @@ export const UI = ({currentState, setCurrentState}) => {
           <Speech text={endTaskText} />
         </span>
       )}
+      {currentState === 3 && (
+        <span>
+          <Badges />
+          <Speech text={["Thanks for filling a journal. I hope it helped you understand your day a little better. Get another kitty badge!"]} />
+        </span>
+      )}
     </div>
   );
 };
