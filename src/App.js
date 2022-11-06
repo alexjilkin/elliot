@@ -58,7 +58,7 @@ const Journal = () => {
       style={{
         width: 150,
         height: 60,
-        backgroundImage: "url('/assets/button.png')",
+        backgroundImage: `url('${process.env.PUBLIC_URL}/assets/button.png')`,
         backgroundSize: "cover",
         cursor: "pointer",
         fontSize: 30,

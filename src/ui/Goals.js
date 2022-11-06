@@ -27,7 +27,7 @@ export const Goals = ({onEnd}) => {
 
     return (
         <div className="modal" >
-            <div className="something" style={{backgroundImage: "url('/assets/window.png')"}} > 
+            <div className="something" style={{backgroundImage: `url('${process.env.PUBLIC_URL}/assets/window.png')`}} > 
             <div className="main">
                 Hei again, try and find 3 things you would like to accomplish today. 
                 It can be anything - Do homework, clean your room or just sleep longer.
