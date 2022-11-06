@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://alexjilkin.github.io/elliot/static/css/main.227b9332.css",
-    "main.js": "https://alexjilkin.github.io/elliot/static/js/main.9b2a0c09.js",
-    "static/js/787.d1d7a117.chunk.js": "https://alexjilkin.github.io/elliot/static/js/787.d1d7a117.chunk.js",
-    "index.html": "https://alexjilkin.github.io/elliot/index.html",
-    "main.227b9332.css.map": "https://alexjilkin.github.io/elliot/static/css/main.227b9332.css.map",
-    "main.9b2a0c09.js.map": "https://alexjilkin.github.io/elliot/static/js/main.9b2a0c09.js.map",
-    "787.d1d7a117.chunk.js.map": "https://alexjilkin.github.io/elliot/static/js/787.d1d7a117.chunk.js.map"
+    "main.css": "/elliot/static/css/main.227b9332.css",
+    "main.js": "/elliot/static/js/main.167966ae.js",
+    "static/js/787.d1d7a117.chunk.js": "/elliot/static/js/787.d1d7a117.chunk.js",
+    "index.html": "/elliot/index.html",
+    "main.227b9332.css.map": "/elliot/static/css/main.227b9332.css.map",
+    "main.167966ae.js.map": "/elliot/static/js/main.167966ae.js.map",
+    "787.d1d7a117.chunk.js.map": "/elliot/static/js/787.d1d7a117.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.227b9332.css",
-    "static/js/main.9b2a0c09.js"
+    "static/js/main.167966ae.js"
   ]
 }
