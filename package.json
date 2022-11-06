@@ -2,6 +2,7 @@
   "name": "elliot",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://alexjilkin.github.io/elliot",
   "dependencies": {
     "@inlet/react-pixi": "^6.8.0",
     "@testing-library/jest-dom": "^5.16.5",
